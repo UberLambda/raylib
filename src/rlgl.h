@@ -3296,7 +3296,7 @@ Texture2D GenTextureCubemap(Shader shader, Texture2D map, int size)
     for (unsigned int i = 0; i < 6; i++)
     {
 #if defined(GRAPHICS_API_OPENGL_33)
-        glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB32F, size, size, 0, GL_RGB, GL_FLOAT, NULL);
+        glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB16F, size, size, 0, GL_RGB, GL_FLOAT, NULL);
 #elif defined(GRAPHICS_API_OPENGL_ES2)
         if (RLGL.ExtSupported.texFloat32) glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB, size, size, 0, GL_RGB, GL_FLOAT, NULL);
 #endif
